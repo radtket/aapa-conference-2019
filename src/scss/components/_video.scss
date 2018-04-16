@@ -1,0 +1,25 @@
+.video-sec {
+	background: #3d7cc9;
+}
+
+.video-sec__wrap {
+	@include span-columns(12);
+	@media (min-width: 850px) {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+.video-wrapper {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+	position: relative;
+
+	embed,
+	object,
+	iframe {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+	}
+}

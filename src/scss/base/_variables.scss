@@ -1,0 +1,63 @@
+// Typography
+$base-font-family: 'BentonSans', $font-stack-system;
+$heading-font-family: $base-font-family;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$white: #fff;
+$white-75: rgba($white, 0.75);
+$black: #000;
+$color-snow: #f8f8f8;
+$color-snow-d: #c5c5c5;
+
+// Theme Colors
+$color-purple: #6b478e;
+$color-purple-light: #7673c0;
+$color-blue: #636cb2;
+
+$color-blue-d: #2261AE;
+$color-blue-l: #3D7CC9;
+$color-teal: #6BCBB8;
+
+// Secondary Theme Colors
+$color-pink: #ed3e7a;
+$color-pink-l: tint($color-pink, 20%);
+$color-pink-d: shade($color-pink, 20%);
+$color-lime: #c9da2a;
+$color-black: #202020;
+$color-gray: $medium-gray;
+$footer-icon-break: 450px;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $color-blue-l;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

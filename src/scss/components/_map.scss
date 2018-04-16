@@ -1,0 +1,61 @@
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+#map img {
+	max-width: none;
+}
+
+#map .content {
+	padding: 0 0.5em 1em 0.5em;
+}
+
+#map .firstHeading {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em;
+	margin: 0;
+}
+
+#map #bodyContent p {
+	font-size: 1em;
+	margin: 0;
+}
+
+.map-copy {
+	background: $color-lime;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 0;
+	font-size: 20px;
+	h2 {
+		font-size: 36px;
+		display: inline-block;
+		position: relative;
+		&:after {
+			@include position(absolute, null null -11px 0);
+			content: '';
+			height: 4px;
+			width: 33%;
+			background: $color-pink;
+		}
+	}
+
+	strong {
+		font-size: 24px;
+		font-weight: 500;
+	}
+}
+
+.container-full {
+	@include outer-container(100%);
+	@media (min-width: 650px) {
+		display: flex;
+		> div {
+			padding: 0;
+			width: 50%;
+		}
+	}
+}

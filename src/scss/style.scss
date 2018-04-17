@@ -1,9 +1,7 @@
 @import '../../node_modules/bourbon/core/bourbon';
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
-
 @import "base/font-face";
 @import "base/variables";
-
 @import "base/buttons";
 @import "base/forms";
 @import "base/layout";
@@ -11,10 +9,55 @@
 @import "base/media";
 @import "base/tables";
 @import "base/typography";
-
 @import "components/navbar";
 @import "components/hero";
 @import "components/intro";
 @import "components/video";
 @import "components/footer";
 @import "components/map";
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	line-height: 60px;
+	float: right;
+
+	a:hover {
+		background-color: $color-blue-d;
+	}
+
+	button {
+		background-color: $color-pink;
+		color: $color-snow;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: $color-blue-l;
+	min-width: 178px;
+	overflow: auto;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	text-align: center;
+
+	a {
+		color: $color-snow;
+		padding: ($small-spacing / 2) $small-spacing;
+		text-decoration: none;
+		display: block;
+		line-height: 1.5;
+		border-bottom: 1px solid $color-blue-d;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.show {
+	display: block;
+}

@@ -1,3 +1,17 @@
+$(window).load(() => {
+  // Page loader
+
+  $('body').imagesLoaded(() => {
+    $('.page-loader div').fadeOut();
+    $('.page-loader')
+      .delay(200)
+      .fadeOut('slow');
+  });
+
+  $(window).trigger('scroll');
+  $(window).trigger('resize');
+});
+
 $(document).ready(() => {
   $(window).trigger('resize');
 });

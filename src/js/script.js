@@ -35,15 +35,43 @@ function js_height_init() {
 }
 
 function initMap() {
-  const uluru = { lat: 39.743163, lng: -104.9971202 };
+  const bounds = new google.maps.LatLngBounds();
+
+  const locations = [
+    ['Colorado Convention Center', 39.743163, -104.9971202, 1],
+    ['Hyatt Regency Denver at Colorado Convention Center', 39.7433585, -104.995759, 2],
+  ];
+
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: uluru,
+    zoom: 16,
+    center: new google.maps.LatLng(39.743163, -104.9971202),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map,
-  });
+
+  const infowindow = new google.maps.InfoWindow();
+
+  let marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map,
+    });
+
+    bounds.extend(marker.position);
+
+    google.maps.event.addListener(
+      marker,
+      'click',
+      (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        };
+      })(marker, i)
+    );
+  }
+  map.fitBounds(bounds);
 }
 
 function myFunction() {

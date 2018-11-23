@@ -9,17 +9,18 @@ $material-design-line-size: $small-spacing;
 	width: 100%;
 
 	&::after {
+		@include position(absolute, null 0 (-$material-design-line-size) 0);
 		background-color: $color-snow-d;
 		content: '';
 		display: block;
 		height: $material-design-line-size;
 		width: 100%;
-		@include position(absolute, null 0 (-$material-design-line-size) 0);
 	}
 
 	&__logo {
 		height: ($base-spacing * 2);
 		margin-bottom: $base-spacing;
+
 		svg {
 			height: 100%;
 		}
@@ -48,6 +49,7 @@ $material-design-line-size: $small-spacing;
 			display: inline-block;
 			// height: ($base-spacing * 2);
 			margin-bottom: $small-spacing;
+
 			@media (min-width: $footer-icon-break) {
 				@include span-columns(3);
 			}
@@ -67,32 +69,32 @@ $material-design-line-size: $small-spacing;
 		&--text {
 			color: $color-gray;
 			font-size: calcRem(12);
+
 			@media (min-width: $footer-icon-break) {
+				@include span-columns(9);
 				padding-left: $base-spacing;
 				text-align: left;
-				@include span-columns(9);
 			}
 		}
 	}
 
 	hr {
-		display: inline-block;
 		border-color: $color-teal;
+		display: inline-block;
 		width: ($base-spacing * 2) * 4;
 	}
 }
 
-
 .social-list {
 	a {
+		@include size($base-spacing);
 		display: inline-block;
 		margin-right: $small-spacing;
 		vertical-align: middle;
-		@include size($base-spacing);
 
 		@media (min-width: $footer-icon-break) {
-			margin-right: $base-spacing;
 			@include size($base-spacing * 1.25);
+			margin-right: $base-spacing;
 		}
 
 		&:last-of-type {

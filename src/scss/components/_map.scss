@@ -1,45 +1,47 @@
 #map {
 	height: 400px;
 	width: 100%;
-}
 
-#map img {
-	max-width: none;
-}
+	img {
+		max-width: none;
+	}
 
-#map .content {
-	padding: 0 0.5em 1em 0.5em;
-}
+	.content {
+		padding: 0 .5em 1em;
+	}
 
-#map .firstHeading {
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1em;
-	margin: 0;
-}
+	.firstHeading {
+		font-size: 1em;
+		font-weight: bold;
+		line-height: 1em;
+		margin: 0;
+	}
 
-#map #bodyContent p {
-	font-size: 1em;
-	margin: 0;
+	#bodyContent p {
+		font-size: 1em;
+		margin: 0;
+	}
 }
 
 .map-copy {
+	align-items: center;
 	background: $color-lime;
 	display: flex;
-	align-items: center;
+	font-size: 20px;
 	justify-content: center;
 	padding: 40px 0;
-	font-size: 20px;
+
 	h2 {
-		font-size: 36px;
 		display: inline-block;
+		font-size: 36px;
 		position: relative;
-		&:after {
+
+		&::after {
 			@include position(absolute, null null -11px 0);
+			background: $color-pink;
 			content: '';
 			height: 4px;
 			width: 33%;
-			background: $color-pink;
 		}
 	}
 
@@ -51,8 +53,10 @@
 
 .container-full {
 	@include outer-container(100%);
+
 	@media (min-width: 650px) {
 		display: flex;
+
 		> div {
 			padding: 0;
 			width: 50%;

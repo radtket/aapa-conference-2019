@@ -1,9 +1,19 @@
 .video-sec {
-	background: #3d7cc9;
+	// background: #3d7cc9;
+	background-image: url('../assets/video-bg-01.svg');
+
+	&::before {
+		@include position(absolute, 0);
+		@include size(100%);
+		background: $color-blue-l;
+		content: '';
+		z-index: -1;
+	}
 }
 
 .video-sec__wrap {
 	@include span-columns(12);
+
 	@media (min-width: 850px) {
 		@include span-columns(8);
 		@include shift(2);

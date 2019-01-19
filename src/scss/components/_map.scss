@@ -7,7 +7,7 @@
 	}
 
 	.content {
-		padding: 0 .5em 1em;
+		padding: 0 0.5em 1em;
 	}
 
 	.firstHeading {
@@ -39,7 +39,7 @@
 		&::after {
 			@include position(absolute, null null -11px 0);
 			background: $color-pink;
-			content: '';
+			content: "";
 			height: 4px;
 			width: 33%;
 		}
@@ -57,7 +57,7 @@
 	@media (min-width: 650px) {
 		display: flex;
 
-		> div {
+		>div {
 			padding: 0;
 			width: 50%;
 		}

@@ -1,12 +1,12 @@
 .video-sec {
 	// background: #3d7cc9;
-	background-image: url('../assets/video-bg-01.svg');
+	background-image: url("../img/video-bg-01.svg");
 
 	&::before {
 		@include position(absolute, 0);
 		@include size(100%);
 		background: $color-blue-l;
-		content: '';
+		content: "";
 		z-index: -1;
 	}
 }

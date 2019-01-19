@@ -11,7 +11,7 @@ $material-design-line-size: $small-spacing;
 	&::after {
 		@include position(absolute, null 0 (-$material-design-line-size) 0);
 		background-color: $color-snow-d;
-		content: '';
+		content: "";
 		display: block;
 		height: $material-design-line-size;
 		width: 100%;
